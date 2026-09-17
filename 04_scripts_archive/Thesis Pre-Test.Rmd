@@ -1,0 +1,633 @@
+---
+title: "Survey of Public Policies - Pre-Analysis Plan"
+author: "Vinícius Pinon"
+date: "2024-06-14"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Study Information
+
+## Description
+
+Can institutionalization reduce affective polarization? In this study, we aim to analyze factors beyond people's perceptions of public policies. Specifically, we will operationalize "institutionalization" and "politicization" of policies to demonstrate how the perceived characteristics of public policies can increase or decrease public support, particularly among individuals with differing political views. This study is part of a master's thesis at the Brazilian School of Public and Business Administration (FGV-EBAPE).
+
+This document outlines the design, expected results, and analysis plan of a conjoint survey experiment approved by the Committee for Ethical Compliance in Research Involving Human Beings at the Getúlio Vargas Foundation (FGV). The survey will ask participants about their political alignment with a party and the country's former presidents, their perceived level of institutionalization of certain federal public policies, their evaluation of these policies, and the association they perceive (or not) between policies and specific politicians.
+
+We expect the data analysis to reveal: i) a positive association between individuals' positive partisanship and the evaluation of policies they perceive as aligned with their preferred parties; ii) a negative association between individuals' negative partisanship and the evaluation of policies they perceive as aligned with their least-favored parties; iii) a positive association between perceived institutionalization of the policies and their evaluation.
+
+# Hypotheses
+
+-   Hypothesis 1: Institutionalization is not associated with politicization.
+
+-   Hypothesis 2a: Aligned politicization positively affects partisans' opinions on policies.
+
+-   Hypothesis 2b: Politicization negatively affects non-partisans' opinions on policies.
+
+-   Hypothesis 3: Institutionalization positively affects the individuals' opinions on policies.
+
+# Design Plan
+
+## Main Variables
+
+We will use a conjoint experiment to measure the most relevant features of institutionalization. Through randomization, participants will be shown fictional policies combining these features, and they will be asked about their confidence in the policy's continuity. Based on the features' relevance predicted by the conjoint experiment, we will then ask participants which of these features they perceive in real policies to determine their level of institutionalization. Policies' politicization will be assessed by examining whether participants associate the policies with specific politicians, notably Lula (PT) and Bolsonaro (PL). To measure aligned partisanship, we will check if the association between policies and politicians matches the participants' preferred parties, if they have one. Finally, participants will be asked to evaluate a sample of policies. The study will be conducted with a cross-sectional sample of Brazilian internet users, using Qualtrics software for data collection and R for data analysis.
+
+### Conjoint Experiment
+
+We will employ a block randomization technique within the Qualtrics platform. Each participant will be randomly assigned to one of four fictional policies and will see two versions of it:
+
+Por favor, leia o texto a seguir antes de responder as próximas perguntas:
+
+1.  [1/4] Com o aumento de casos de depressão e suicídios entre os jovens brasileiros, uma ONG recomendou que o país criasse uma política pública para melhorar a saúde mental entre os alunos do ensino básico. Uma opção seria o programa "Saúde Mental nas Escolas", que visa promover o bem-estar mental dos alunos treinando os professores para identificarem tendências depressivas e suicidas entre jovens e os acolherem. Nas duas páginas seguintes, você verá dois contextos diferentes em que o "Saúde Mental nas Escolas" pode ser aplicado e responderá em qual deles acredita que ele teria mais chances de continuar existindo.
+2.  [2/4] Diante do aumento da desigualdade de renda e da exclusão social em áreas urbanas, uma ONG recomendou que o governo implementasse uma política de moradia social para famílias de baixa renda. Uma opção seria o programa "Minha Casa Melhor", que promoveria a reforma de habitações populares em áreas de risco, com acesso a serviços básicos e infraestrutura adequada. Nas duas páginas seguintes, você verá dois contextos diferentes em que o "Minha Casa Melhor" pode ser aplicado e responderá em qual deles acredita que ele teria mais chances de continuar existindo.
+3.  [3/4] Considerando os impactos à saúde pública e a crescente popularidade dos cigarros eletrônicos no país, uma ONG recomendou que o Brasil criasse políticas de regularização do seu uso. Uma opção seria o programa "Eletrônico também é Cigarro!", que exigiria que as empresas colocassem avisos explícitos sobre os riscos à saúde nas embalagens de cigarros eletrônicos. Nas duas páginas seguintes, você verá dois contextos diferentes em que o "Eletrônico também é Cigarro!" pode ser aplicado e responderá em qual deles acredita que ele teria mais chances de continuar existindo.
+4.  [4/4] Um estudo recente mostrou que mais da metade dos homicídios no Brasil não são resolvidos. Por isso, uma ONG recomendou que o país criasse políticas de incentivo para o esclarecimento dessas mortes. Uma opção seria o programa "Índice Nacional de Esclarecimento de Homicídios", que poderia servir como incentivo para que os órgãos de segurança do país inteiro trabalhassem juntos para melhorar a resolução de casos não resolvidos. Nas duas páginas seguintes, você verá dois contextos diferentes em que o "Índice Nacional de Esclarecimento de Homicídios" pode ser aplicado e responderá em qual deles acredita que ele teria mais chances de continuar existindo.
+
+Subsequently, one of these four policies will have two versions presented to participants, each of them mixing pre-determined institutionalization characteristics. Then, they will choose the alternative in which they have more confidence in the continuity.
+
+-   Em qual desses dois contextos de implementação você acredita que a política citada no texto anterior teria mais chances de continuar existindo? [Clique em cima da opção que escolher].
+
+With the features' relevance predicted by the conjoint experiment, we proceed to ask which of these features participants see in real policies, finding their institutionalization level.
+
+-   Agora, gostaria de entender melhor sua visão a respeito dessas 8 (oito) políticas públicas. Por favor, marque as alternativas que você acredita que descrevem melhor as seguintes políticas [não há limite de opções, marque quantas alternativas achar que fazem sentido, na sua opinião]:
+
+|                                         | Os principais partidos e políticos apoiam essa política | Essa política está na Constituição | Essa política existe há muito tempo | Essa política é gerida por um órgão ou agência independente | Essa política costuma ter bons resultados | Não conheço a política. |
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| Programa Bolsa-Família (PBF)            |                                                         |                                    |                                     |                                                             |                                           |                         |
+| Lei Rouanet                             |                                                         |                                    |                                     |                                                             |                                           |                         |
+| Governo Digital (gov.br)                |                                                         |                                    |                                     |                                                             |                                           |                         |
+| Escolas Cívico-Militares                |                                                         |                                    |                                     |                                                             |                                           |                         |
+| Benefício de Prestação Continuada (BPC) |                                                         |                                    |                                     |                                                             |                                           |                         |
+| Médicos Pelo Brasil                     |                                                         |                                    |                                     |                                                             |                                           |                         |
+| Random policy from the list             |                                                         |                                    |                                     |                                                             |                                           |                         |
+| Random policy from the list             |                                                         |                                    |                                     |                                                             |                                           |                         |
+
+-   Two of the following policies will be shown for participants randomly: a) FIES/PROUNI; b) PAC (Programa de Aceleração do Crescimento); c) Lei de Cotas; d) PIX; e) ENEM (Exame Nacional do Ensino Médio); f) Minha Casa Minha Vida; g) Farmácia Popular; h) Mais Médicos; i) Pacote Anti-Crime; j) Reforma da Previdência; k) Casa Verde e Amarela; l) SAMU-192; m) SUS; n) MEI (Microempreendedor Individual); o) Teto de Gastos.
+
+## Control Variables
+
+In addition to the main variables, we intend to use information regarding age, gender, education, information consumption habits, level of interest in politics, and income as control variables. This can also be useful to explore heterogeneities regarding the predicted values ​​obtained in the joint experiment.
+
+# Preparing Data
+
+## Setting Libraries
+
+```{r include=FALSE, results='hide'}
+library(qualtRics)
+library(dplyr)
+library(tidyr)
+library(cjoint)
+library(cjpowR)
+library(ggplot2)
+library(ggExtra)
+library(lmtest)
+library(lubridate)
+library(stargazer)
+```
+
+## Importing data from the Conjoint through local archive
+
+```{r}
+test <- read.csv("Thesis/Conjoint Piloto_4 de agosto de 2024_23.30.csv") # importando dados
+
+for (coluna in colnames(test)) {
+  attr(test[[coluna]], "description") <- test[1, coluna]
+} # adicionando descrição aos dados
+
+data <- test[-c(1:2), ] # filtrando primeiras linhas
+
+data <- data %>%
+  filter(att_check == "Muito satisfeito(a)") # attention check
+
+data$Duration..in.seconds. <- as.numeric(data$Duration..in.seconds.) # convertendo para minutos
+
+data <- data %>%
+  mutate(Duration_in_minutes = Duration..in.seconds. / 60) # coluna com duração em minutos
+
+media_duracao_minutos <- data %>%
+  summarise(media_duracao = mean(Duration_in_minutes, na.rm = TRUE)) # vendo duração média total
+
+media_duracao_max32 <- data %>%
+  mutate(duracao_max32 = pmin(Duration_in_minutes, 32)) %>%
+  summarise(media_duracao_max32 = mean(duracao_max32, na.rm = TRUE)) # vendo duração média com máximo de 32
+
+data <- data %>%
+  select(1:6, Duration_in_minutes, 7:ncol(data)) # colocando uma coluna do lado da outra
+```
+
+## Adjusting conjoint data
+
+Here, we renamed the variables and coded them to identify the profile the participant was viewing when answering the question.
+
+```{r}
+# Mantendo só colunas do conjoint
+conjoint <- data %>%
+  select(ResponseId, C1:DC22, feature0.1.1_CBCONJOINT:TextoConjoint_DO_text_red)
+
+# Selecionando C1 (1.1)
+conjoint_c1.1 <- conjoint %>%
+  select(ResponseId, C1, DC21, ends_with("1.1_CBCONJOINT")) %>%
+  rename(C = C1, DC = DC21, 
+         Apoio = feature0.1.1_CBCONJOINT,
+         Legal = feature1.1.1_CBCONJOINT,
+         Tempo = feature2.1.1_CBCONJOINT,
+         Autonomia = feature3.1.1_CBCONJOINT,
+         Resultados = feature4.1.1_CBCONJOINT) %>%
+  mutate(out = ifelse(C == 1, 1, 0))
+  
+# Selecionando C1 (1.2)
+conjoint_c1.2 <- conjoint %>%
+  select(ResponseId, C1, DC21, ends_with("1.2_CBCONJOINT")) %>%
+  rename(C = C1, DC = DC21, 
+         Apoio = feature0.1.2_CBCONJOINT,
+         Legal = feature1.1.2_CBCONJOINT,
+         Tempo = feature2.1.2_CBCONJOINT,
+         Autonomia = feature3.1.2_CBCONJOINT,
+         Resultados = feature4.1.2_CBCONJOINT) %>%
+  mutate(out = ifelse(C == 2, 1, 0))
+
+# Selecionando C2 (2.1)
+conjoint_c2.1 <- conjoint %>%
+  select(ResponseId, C2, DC22, ends_with("2.1_CBCONJOINT")) %>%
+  rename(C = C2, DC = DC22, 
+         Apoio = feature0.2.1_CBCONJOINT,
+         Legal = feature1.2.1_CBCONJOINT,
+         Tempo = feature2.2.1_CBCONJOINT,
+         Autonomia = feature3.2.1_CBCONJOINT,
+         Resultados = feature4.2.1_CBCONJOINT) %>%
+  mutate(out = ifelse(C == 1, 1, 0))
+
+# Selecionando C2 (2.2)
+conjoint_c2.2 <- conjoint %>%
+  select(ResponseId, C2, DC22, ends_with("2.2_CBCONJOINT")) %>%
+  rename(C = C2, DC = DC22, 
+         Apoio = feature0.2.2_CBCONJOINT,
+         Legal = feature1.2.2_CBCONJOINT,
+         Tempo = feature2.2.2_CBCONJOINT,
+         Autonomia = feature3.2.2_CBCONJOINT,
+         Resultados = feature4.2.2_CBCONJOINT) %>%
+  mutate(out = ifelse(C == 2, 1, 0))
+
+# Empilhando os dataframes e reorganizando as colunas
+conjoint_final <- bind_rows(conjoint_c1.1, conjoint_c1.2, 
+                            conjoint_c2.1, conjoint_c2.2)
+
+# Recodificando
+conjoint_encoded <- conjoint_final %>%
+  mutate(
+    Apoio = factor(ifelse(Apoio == "Teve apoio dos principais políticos e partidos.", 1, 0)),
+    Legal = factor(ifelse(Legal == "Está na Constituição.", 1, 0)),
+    Tempo = factor(ifelse(Tempo == "Existe há muito tempo.", 1, 0)),
+    Autonomia = factor(ifelse(Autonomia %in% c("É gerida por funcionários públicos de carreira.", "É gerida por uma agência independente do Ministério responsável pela política."), 1, 0)),
+    Resultados = factor(ifelse(Resultados == "Conseguiu atingir os objetivos pretendidos pela política.", 1, 0))
+  )
+```
+
+### Analyzing the Conjoint Experiment
+
+```{r}
+# Renomear os casos
+conjoint_amce <- conjoint_encoded %>%
+  mutate(
+    Apoio = factor(ifelse(Apoio == 1, "Apoio", "Não Apoio")),
+    Legal = factor(ifelse(Legal == 1, "Legal", "Não Legal")),
+    Tempo = factor(ifelse(Tempo == 1, "Tempo", "Não Tempo")),
+    Autonomia = factor(ifelse(Autonomia == 1, "Autonomia", "Não Autonomia")),
+    Resultados = factor(ifelse(Resultados == 1, "Resultados", "Não Resultados"))
+  )
+
+# Reordenar os níveis para garantir que os níveis com "Não" sejam o baseline
+conjoint_amce <- conjoint_amce %>%
+  mutate(
+    Apoio = relevel(Apoio, ref = "Não Apoio"),
+    Legal = relevel(Legal, ref = "Não Legal"),
+    Tempo = relevel(Tempo, ref = "Não Tempo"),
+    Autonomia = relevel(Autonomia, ref = "Não Autonomia"),
+    Resultados = relevel(Resultados, ref = "Não Resultados")
+  )
+
+# Estimar os AMCEs
+amce_results <- amce(
+  data = conjoint_amce,
+  formula = out ~ Apoio + Legal + Tempo + Autonomia + Resultados,
+  respondent.id = "ResponseId"
+)
+
+# Mostrar os resultados dos AMCEs
+summary(amce_results)
+
+# Visualizar os AMCEs
+plot(amce_results, xlab="Change in Y (Most likely policy durability)")
+```
+
+## Creating the politicization variable (POLI_ij)
+
+The first independent variable will consist of a simple politicization indicator to check whether the respondent associated the program with a politician. Based on the "no - a little - yes" scale, we have a value from 0 to 2 for each politician the policy relates to. Adding the two together, we can have a politicization index from 0 to 4. We will also conduct correlation tests for this index with partisanship.
+
+```{r}
+# Criando dataframe para variável
+data_polit <- data %>%
+  select(ResponseId, ident_pt, ident_anti, starts_with("polit_")) %>% #selecionando colunas com polit_
+  pivot_longer(cols = starts_with("polit_"),
+               names_to = "policy",
+               values_to = "politicization") %>% # pivotando
+  mutate(politicization = as.integer(as.numeric(politicization))) %>%
+  mutate(politicization = na_if(politicization, -99)) %>%
+  mutate(policy = sub("^polit_", "", policy)) %>%
+  separate(col = policy, into = c("policy", "policy_party"), sep = "_") %>%
+  pivot_wider(names_from = policy_party, values_from = politicization) %>%
+  rename(polit_pt = pt, polit_anti = anti) %>%
+  mutate(polit_total = polit_pt + polit_anti) %>%
+  mutate(
+    concentration = case_when(
+      polit_total == 0 ~ 0,  # Evitar divisão por zero
+      TRUE ~ pmax(polit_pt, polit_anti) / polit_total
+    )) %>%
+  mutate(POLI_ij = polit_total * concentration)
+```
+
+## Creating the partisanship variable (PART_ij)
+
+Secondly, we created the variable "aligned partisanship" according to the respondent's party identification. According to the most recent empirical findings, the PT and anti-PTismo delineate clear limits in Brazilian partisanship, so they will be our focus in the partisan analysis. When an interviewee is identified as petista or antipetista, we subtract the level of politicization associated with their party from the level of politicization associated with the rival party. On the other hand, in the case of non-partisans, we cannot define the value of this variable.
+
+```{r}
+# Criando dataframe para variável
+data_part <- data_polit %>%
+  mutate(ident = case_when(
+    ident_pt == "PT" ~ "petista",
+    ident_anti == "PT" ~ "antipetista",
+    TRUE ~ "nao_partidario")) %>%
+    mutate(PART_ij = case_when(
+    ident == "petista" ~ polit_pt - polit_anti,
+    ident == "antipetista" ~ polit_anti - polit_pt,
+    TRUE ~ NA_real_
+  )) %>%
+  select(ResponseId, policy, PART_ij)
+```
+
+## Creating the institutionalization variable (INST_ij)
+
+The institutionalization score is the result of the predicted value computed using the regression estimated in the conjoint and the responses of each individual to the policy attributes.
+
+```{r}
+# Selecionar e renomear as colunas
+data_inst <- data %>%
+  select(ResponseId, starts_with("inst_caract_"), -starts_with("inst_caract_DO")) %>%
+  rename_with(~sub("inst_caract_", "", .))
+
+# Criar novos dataframes
+new_dataframes <- lapply(unique(sub("_[0-9]+$", "", names(data_inst)[-1])), function(prefix) {
+  selected_cols <- grep(paste0("^", prefix, "_"), names(data_inst))
+  new_data <- data_inst %>%
+    select(ResponseId, starts_with(prefix)) %>%
+    rename_all(~sub(paste0("^", prefix, "_"), "", .))
+  new_data$policy <- prefix
+  return(new_data)
+})
+
+# Empilhar todos os dataframes em um único dataframe
+combined_data <- bind_rows(new_dataframes)
+
+# Renomear as colunas
+colnames(combined_data) <- c("ResponseId", "Apoio", "Legal", "Tempo", "Autonomia", "Resultados", "NS", "Nenhuma", "policy")
+
+# Filtrar os casos
+combined_data_filtered <- combined_data[rowSums(combined_data[, -c(1, ncol(combined_data))] != "") > 0, ]
+
+# Filtrar os casos em que a coluna "NS" está preenchida e casos em que "Nenhuma" está preenchida junto com outras alternativas
+combined_data_filtered2 <- combined_data_filtered %>%
+  filter(NS != "Não conheço a política") %>%
+  filter(!(Nenhuma != "" & 
+             (Apoio != "" |
+                Legal != "" |
+                Tempo != "" |
+                Autonomia != "" |
+                Resultados != ""))) %>%
+  select(-NS, -Nenhuma)
+
+# Recodificando
+data_inst <- combined_data_filtered2 %>%
+  mutate(
+    Apoio = factor(ifelse(Apoio == "Os principais partidos e políticos apoiam essa política", 1, 0)),
+    Legal = factor(ifelse(Legal == "Essa política está na Constituição", 1, 0)),
+    Tempo = factor(ifelse(Tempo == "Essa política existe há muito tempo", 1, 0)),
+    Autonomia = factor(ifelse(Autonomia == "Essa política é gerida por um órgão ou agência independente", 1, 0)),
+    Resultados = factor(ifelse(Resultados == "Essa política costuma ter bons resultados", 1, 0))
+  )
+
+# Logit regression
+results_log <- glm(out ~ Apoio + Legal + Tempo + Autonomia + Resultados, 
+                   data = conjoint_encoded, family = binomial(link = "logit"))
+
+# summary(results_log)
+# coef(results_log)
+
+# Armazenando predict values
+data_inst_predict <- predict(results_log, newdata = data_inst, type = "response")
+
+# Levando o predict value para os dados
+data_inst$inst_score <- data_inst_predict
+
+# Criando índice de institucionalização das políticas
+data_inst_index <- data_inst %>%
+  group_by(policy) %>%
+  summarize(INST_ij = mean(inst_score, na.rm = TRUE))
+
+# Outras medidas de institucionalizaçõa
+data_inst_chances <- data %>%
+  select(ResponseId, starts_with("inst_chances_")) %>%
+  pivot_longer(cols = starts_with("inst_chances_"), 
+               names_to = "policy",
+               values_to = "inst_chances") %>%
+  mutate(policy = sub("inst_chances_", "", policy)) %>%
+  mutate(inst_chances = as.numeric(inst_chances)) %>% 
+  filter(!is.na(inst_chances)) %>%
+  group_by(policy) %>%
+  summarise(inst_chances = mean(inst_chances, na.rm = TRUE)) 
+
+data_inst_direta <- data %>%
+  select(ResponseId, starts_with("inst_direta_")) %>%
+  pivot_longer(cols = starts_with("inst_direta_"), 
+               names_to = "policy",
+               values_to = "inst_direta") %>%
+  mutate(policy = sub("inst_direta_", "", policy)) %>%
+  filter(inst_direta != "", inst_direta != "Não sei") %>%
+  group_by(policy) %>%
+  summarise(
+    total = n(),
+    continuaria_existir = sum(inst_direta == "Continuaria existindo mesmo contra a vontade dos políticos"), 
+    inst_direta = (continuaria_existir / total) * 100
+  ) %>%
+  select(policy, inst_direta)
+
+data_inst_full <- data_inst_index %>%
+  left_join(data_inst_chances, by = "policy") %>%
+  left_join(data_inst_direta, by = "policy")
+```
+
+## Creating the evaluation variable (EVAL_ij)
+
+Finally, the evaluation will be carried out directly by the respondents, who will give ratings for each policy viewed by them.
+
+```{r}
+# Criar tabela com valor de índice das políticas para conectar com dados da nota
+index <- as.character(1:21)
+
+name_policy <- c(
+  "Programa Bolsa-Família (PBF)",
+  "Benefício de Prestação Continuada (BPC)",
+  "SAMU-192",
+  "Mais Médicos",
+  "Médicos pelo Brasil",
+  "Farmácia Popular",
+  "Casa Verde e Amarela",
+  "Minha Casa Minha Vida",
+  "FIES/PROUNI",
+  "Escolas Cívico-Militares",
+  "PAC (Programa de Aceleração do Crescimento)",
+  "Lei Rouanet",
+  "Lei de Cotas",
+  "PIX",
+  "Pacote Anti-Crime",
+  "MEI (Microempreendedor Individual)",
+  "ENEM (Exame Nacional do Ensino Médio)",
+  "Governo Digital (gov.br)",
+  "SUS",
+  "Reforma da Previdência",
+  "Teto de Gastos"
+)
+policy <- c(
+  "pbf",
+  "bpc",
+  "samu",
+  "maismed",
+  "medpb",
+  "farmpop",
+  "casavam",
+  "mcmv",
+  "fiespro",
+  "ecmilit",
+  "pac",
+  "rouanet",
+  "cotas",
+  "pix",
+  "anticrime",
+  "mei",
+  "enem",
+  "govbr",
+  "sus",
+  "prev",
+  "teto"
+)
+
+policies <- data.frame(index, name_policy, policy)
+
+# Criar o dataframe
+data_eval <- data %>%
+  select(ResponseId, starts_with("nota_"), idade, sexo, regiao, interesse, escolar, renda) %>% #selecionando colunas com nota_
+  pivot_longer(cols = starts_with("nota_"),
+               names_to = "index",
+               values_to = "EVAL_ij") %>% # pivotando
+  mutate(index = sub("^nota_", "", index),
+         EVAL_ij = as.numeric(EVAL_ij)) %>%
+  left_join(policies) %>%
+  select(ResponseId, policy, EVAL_ij, idade, sexo, regiao, interesse, escolar, renda)
+```
+
+## Joining all dataframes
+
+```{r}
+data_final <- data_eval %>%
+  left_join(data_polit, by = c("ResponseId", "policy")) %>%
+  left_join(data_part, by = c("ResponseId", "policy")) %>%
+  left_join(data_inst_index, by = c("policy")) %>%
+  select(ResponseId, policy, concentration, INST_ij, POLI_ij, PART_ij, EVAL_ij, idade, sexo, regiao, interesse, escolar, renda)
+```
+
+# Power Analysis
+
+We will use the package "cjpowR" to conduct a power analysis and calculate the minimum sample size.
+
+```{r}
+# This gives the minimum required effective sample size (type S, E(type M)):
+df = cjpowr_amce(amce = 0.05, power = 0.8, levels = 2)
+
+# For example, for a conjoint with 2 profiles and 2 tasks, n becomes:
+df$n/(2*2)
+
+#This gives the power (type S, E(type M)):
+cjpowr_amce(amce = 0.05, n = 3132, levels = 2)
+```
+
+# Results
+
+## Expectations
+
+We expect the data analysis to reveal: i) a positive association between individuals' positive partisanship and the evaluation of policies they perceive as aligned with their preferred parties; ii) a negative association between individuals' negative partisanship and the evaluation of policies they perceive as aligned with their least-favored parties; iii) a positive association between perceived institutionalization of the policies and their evaluation.
+
+## Hypothesis 1
+
+To test our hypothesis 1, that institutionalization is not associated with politicization, we will divide it into two stages. For an aggregate test, we will make a scatter plot of INST_j x POLI_j. These are the aggregated versions of our variables. While INST_j is simply an average of INST_ij, POLI_j is a measure that multiplies the level of POLI_ij by the concentration of the policy's association with each politician. This concentration measure serves to distinguish a policy in which most participants clearly associate with a specific politician (more politicized) from one associated with both (less politicized, according to our theory). For the test that uses individuals as the unit of analysis, we compute the association between INST_ij and PART_ij. Furthermore, we will estimate a linear regression to also take into account some demographic controls, and cluster the standard errors by individual.
+
+```{r, results='hide'}
+# Criar as variáveis agregadas
+aggregated_data <- data_final %>%
+  mutate(
+    POLI_ij_scaled = POLI_ij / 4) %>%
+  mutate(PART_ij_scaled = ((PART_ij + 2) / 4)) %>%
+  group_by(policy) %>%
+  summarise(
+    mean_POLI_ij = mean(POLI_ij_scaled, na.rm = TRUE),
+    mean_concentration = mean(concentration, na.rm = TRUE),
+    POLI_j = mean_POLI_ij * mean_concentration,
+    INST_j = mean(INST_ij, na.rm = TRUE),
+    PART_j = mean(PART_ij_scaled, na.rm = TRUE),
+    EVAL_j = mean(EVAL_ij, na.rm = TRUE),
+    .groups = 'drop'
+  )
+
+# Criar o gráfico de dispersão de INST_j x POLI_j
+ggplot(aggregated_data, aes(x = INST_j, y = POLI_j, label = policy)) +
+  geom_point() +
+  labs(title = "Scatter Plot of INST_j vs POLI_j",
+       x = "INST_j",
+       y = "POLI_j") +
+  geom_label(vjust = -0.5, hjust = 0.5) +  # Ajustar a posição do texto
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  theme_minimal()
+
+cor.test(aggregated_data$INST_j, aggregated_data$POLI_j)
+
+# Criar o gráfico de dispersão de INST_j x PART_j
+ggplot(aggregated_data, aes(x = INST_j, y = PART_j, label = policy)) +
+  geom_point() +
+  labs(title = "Scatter Plot of INST_j vs PART_j",
+       x = "INST_j",
+       y = "PART_j") +
+  geom_label(vjust = -0.5, hjust = 0.5) +  # Ajustar a posição do texto
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  theme_minimal()
+
+cor.test(aggregated_data$INST_j, aggregated_data$PART_j)
+
+# Convertendo variáveis categóricas para fator e definindo o baseline (provisório)
+data_final$sexo <- as.factor(data_final$sexo)
+data_final$regiao <- as.factor(data_final$regiao)
+data_final$interesse <- as.factor(data_final$interesse)
+data_final$escolar <- as.factor(data_final$escolar)
+data_final$renda <- as.factor(data_final$renda)
+
+# Convertendo variáveis categóricas para fator e definindo o baseline (final)
+#data_final$sexo <- relevel(as.factor(data_final$sexo), ref = "Feminino")
+#data_final$regiao <- relevel(as.factor(data_final$regiao), ref = "Nordeste")
+#data_final$interesse <- relevel(as.factor(data_final$interesse), ref = "Nada interessado(a)")
+#data_final$escolar <- relevel(as.factor(data_final$escolar), ref = "Nunca frequentou escola")
+#data_final$renda <- relevel(as.factor(data_final$renda), ref = "Nenhuma renda")
+
+# Realizar a regressão linear com controles demográficos
+model_1 <- lm(POLI_ij ~ INST_ij + idade + sexo + regiao + interesse + escolar + renda, data = data_final)
+model_2 <- lm(PART_ij ~ INST_ij + idade + sexo + regiao + interesse + escolar + renda, data = data_final)
+
+# Mostrar os resultados da regressão
+summary(model_1)
+summary(model_2)
+
+# Ajustar os erros padrão para clustering por indivíduo
+model_1_se <- coeftest(model_1, vcov = vcovCL, cluster = ~ResponseId)
+model_2_se <- coeftest(model_2, vcov = vcovCL, cluster = ~ResponseId)
+
+# Imprimir os resultados da regressão
+stargazer(model_1_se, model_2_se,
+          title = "Regression Results",
+          align = TRUE,
+          no.space = TRUE,
+          single.row = TRUE,
+          out = "modelos_regressao.tex")
+```
+
+## Hypothesis 2a
+
+For hypothesis 2a, that aligned partisanship positively affects partisans' opinions on policies, we will estimate a regression model in which EVAL_ij is the dependent variable and PART_ij is the independent variable. We will estimate a model with and another without the control variables.
+
+```{r, results='hide'}
+# Ajustando PART_ij
+data_final <- data_final %>%
+  mutate(PART_ij_scaled = ((PART_ij + 2)))
+
+# Realizar a regressão linear com controles demográficos
+model_3 <- lm(EVAL_ij ~ PART_ij_scaled + idade + sexo + regiao + interesse + escolar + renda, data = data_final)
+
+# Ajustar os erros padrão para clustering por indivíduo
+model_3_se <- coeftest(model_3, vcov = vcovCL, cluster = ~ResponseId)
+
+# Imprimir os resultados da regressão
+stargazer(model_3_se,
+          title = "Regression Results for Model 3",
+          align = TRUE,
+          no.space = TRUE,
+          single.row = TRUE,
+          out = "modelo_3_regressao.tex")
+```
+
+## Hypothesis 2b
+
+As for hypothesis 2b, that politicization negatively affects non-partisans' opinions on policies, EVAL_ij remains the dependent variable, but POLI_ij becomes the independent variable. This model, as predicted by the hypothesis, will be estimated only for non-partisans. Once again, versions with and without control will be estimated.
+
+```{r, results='hide'}
+#data_non <- data_final %>%
+#  filter()
+
+# Realizar a regressão linear com controles demográficos
+model_4 <- lm(EVAL_ij ~ POLI_ij + idade + sexo + regiao + interesse + escolar + renda, data = data_final)
+
+# Ajustar os erros padrão para clustering por indivíduo
+model_4_se <- coeftest(model_4, vcov = vcovCL, cluster = ~ResponseId)
+
+# Mostrar os resultados da regressão
+stargazer(model_4_se,
+          title = "Regression Results for EVAL_ij",
+          align = TRUE,
+          no.space = TRUE,
+          single.row = TRUE,
+          out = "modelo_EVAL_ij_regressao.tex")
+```
+
+## Hypothesis 3
+
+Finally, hypothesis 3 is that institutionalization positively affects individuals' opinions on policies. Once again, EVAL_ij is the dependent variable, while INST_ij becomes the independent variable. This test will also have versions of the model with and without control variables.
+
+```{r, results='hide'}
+# Realizar a regressão linear com controles demográficos
+model_5 <- lm(EVAL_ij ~ INST_ij + idade + sexo + regiao + interesse + escolar + renda, data = data_final)
+
+# Ajustar os erros padrão para clustering por indivíduo
+model_5_se <- coeftest(model_5, vcov = vcovCL, cluster = ~ResponseId)
+
+# Mostrar os resultados da regressão
+stargazer(model_5_se,
+          title = "Regression Results for EVAL_ij (Model 5)",
+          align = TRUE,
+          no.space = TRUE,
+          single.row = TRUE,
+          out = "modelo_5_EVAL_ij_regressao.tex")
+```
+
+## Balance Checks
+
+```{r}
+# Criar o gráfico de dispersão de POLI_ij x PART_ij
+ggplot(aggregated_data, aes(x = PART_j, y = POLI_j, label = policy)) +
+  geom_point() +
+  geom_label(vjust = -0.5, hjust = 0.5) +  # Ajustar a posição do texto
+  labs(title = "Scatter Plot of PART_ij vs POLI_ij",
+       x = "PART_j",
+       y = "POLI_j") +
+    geom_smooth(method = "lm", se = FALSE, color = "red") +
+  theme_minimal()
+
+# Verificar a distribuição dos níveis de cada atributo específico
+conjoint_encoded %>%
+  count(Apoio) %>%
+  mutate(percentage = n / sum(n) * 100)
+```

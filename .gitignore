@@ -1,0 +1,38 @@
+# --- R and RStudio environment files ---
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.RData
+*.RDataTmp
+*.Rproj.user
+environment.RData
+
+# --- Operating System & IDE junk ---
+desktop.ini
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+
+# --- LaTeX build artifacts ---
+*.log
+*.aux
+*.synctex.gz
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+
+# --- Sensitive / Personal Institutional Docs ---
+Submissão/
+01_planning_docs/*.docx
+
+# --- Proprietary & Raw Datasets ---
+03_raw_data/*
+!03_raw_data/.gitkeep
+Vinicius_Thesis/data/
+*.dta
+*.csv
+*.dat
+*.sdt
